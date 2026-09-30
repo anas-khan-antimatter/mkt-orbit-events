@@ -4,14 +4,13 @@
   --background: #030303;
   --foreground: #f8f8f2;
   --brand: #00e5ff;
-  --brand-glow: #00e5ff60;
   --brand-dim: #00b8d4;
   --accent: #ff6bb5;
   --muted: #6b7280;
   --surface: #0a0a0a;
   --surface-elevated: #111111;
   --border: #1f2937;
-  --laser: #ffffffd9;
+  --laser-white: #ffffffd9;
 }
 
 @theme inline {
@@ -24,7 +23,7 @@
   --color-surface: var(--surface);
   --color-surface-elevated: var(--surface-elevated);
   --color-border: var(--border);
-  --color-laser: var(--laser);
+  --color-laser: var(--laser-white);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -35,12 +34,27 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
-/* Aurora glare line effect */
 @keyframes aurora-drift {
-  0%, 100% { opacity: 0.4; transform: translateX(-10%) skewX(-8deg); }
-  50% { opacity: 1; transform: translateX(10%) skewX(4deg); }
+  0%, 100% { opacity: 0.3; transform: translateX(-8%) skewX(-6deg); }
+  50% { opacity: 1; transform: translateX(8%) skewX(3deg); }
 }
 
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(0,229,255,0.15); }
+  50% { box-shadow: 0 0 30px rgba(0,229,255,0.35), 0 0 60px rgba(0,229,255,0.1); }
+}
+
+@keyframes float-up {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scanline-scroll {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 4px; }
+}
+
+/* Aurora glare line — applied via class */
 .aurora-line {
   position: absolute;
   inset: 0;
@@ -50,13 +64,13 @@ body {
 .aurora-line::before {
   content: '';
   position: absolute;
-  top: 60%;
+  top: 55%;
   left: -10%;
   width: 130%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--brand), var(--laser), var(--brand), transparent);
+  background: linear-gradient(90deg, transparent, var(--brand), var(--laser-white), var(--brand), transparent);
   animation: aurora-drift 8s ease-in-out infinite;
-  box-shadow: 0 0 8px var(--brand), 0 0 20px var(--brand-glow);
+  box-shadow: 0 0 8px rgba(0,229,255,0.5), 0 0 20px rgba(0,229,255,0.2);
 }
 
 /* Scan line overlay */
@@ -65,29 +79,39 @@ body {
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  background: repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(255,255,255,0.015) 1px, rgba(255,255,255,0.015) 2px);
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 1px,
+    rgba(255,255,255,0.015) 1px,
+    rgba(255,255,255,0.015) 2px
+  );
+  background-size: 100% 2px;
 }
 
-/* Glow text utility */
+/* Glow text */
 .glow-text {
-  text-shadow: 0 0 10px var(--brand-glow), 0 0 30px var(--brand-glow), 0 0 60px color-mix(in srgb, var(--brand) 30%, transparent);
+  text-shadow:
+    0 0 10px rgba(0,229,255,0.3),
+    0 0 30px rgba(0,229,255,0.15);
 }
 
-/* Poster typography utility */
+/* Poster / editorial style headings */
 .poster {
-  font-family: var(--font-sans);
   font-weight: 900;
   letter-spacing: -0.03em;
-  line-height: 0.95;
-  text-transform: uppercase;
+  line-height: 0.92;
 }
 
-/* Glass card */
+/* Glass / frosted card */
 .glass-card {
-  background: rgba(255,255,255,0.04);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(0,229,255,0.12);
-  box-shadow: 0 0 24px rgba(0,229,255,0.06);
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0,229,255,0.10);
+}
+.glass-card:hover {
+  border-color: rgba(0,229,255,0.35);
+  box-shadow: 0 0 24px rgba(0,229,255,0.08);
 }
 
 /* Custom scrollbar */
@@ -95,5 +119,4 @@ body {
 ::-webkit-scrollbar-track { background: var(--background); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
 
-/* Selection */
 ::selection { background: var(--brand-dim); color: var(--background); }
