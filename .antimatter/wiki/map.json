@@ -1,23 +1,89 @@
 {
   "root": "/tmp/am-ws/c-1790732972231-maddm",
   "name": "c-1790732972231-maddm",
-  "generatedAt": "2026-09-30T15:54:51.761Z",
-  "fileCount": 1,
-  "dirCount": 1,
+  "generatedAt": "2026-09-30T17:40:07.371Z",
+  "fileCount": 30,
+  "dirCount": 5,
   "languages": {
-    "Markdown": 1
+    "Markdown": 9,
+    "JSON": 4,
+    "JavaScript": 2,
+    "TypeScript": 3,
+    "CSS": 1
   },
   "keyFiles": [
     "README.md"
   ],
   "directories": [
     {
-      "dir": "(root)",
-      "fileCount": 1,
+      "dir": ".antimatter/wiki",
+      "fileCount": 6,
       "files": [
+        "index.md",
+        "log.md",
+        "map.json",
+        "map.md",
+        "overview.md",
+        "schema.md"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "(root)",
+      "fileCount": 2,
+      "files": [
+        ".gitignore",
         "README.md"
       ],
       "symbols": []
+    },
+    {
+      "dir": "orbit-events",
+      "fileCount": 10,
+      "files": [
+        ".gitignore",
+        "AGENTS.md",
+        "CLAUDE.md",
+        "eslint.config.mjs",
+        "next.config.ts",
+        "package-lock.json",
+        "package.json",
+        "postcss.config.mjs",
+        "README.md",
+        "tsconfig.json"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "orbit-events/public",
+      "fileCount": 8,
+      "files": [
+        "file.svg",
+        "globe.svg",
+        "next.svg",
+        "vercel.svg",
+        "window.svg",
+        "work-1.svg",
+        "work-2.svg",
+        "work-3.svg"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "orbit-events/src/app",
+      "fileCount": 4,
+      "files": [
+        "favicon.ico",
+        "globals.css",
+        "layout.tsx",
+        "page.tsx"
+      ],
+      "symbols": [
+        {
+          "name": "metadata",
+          "kind": "const"
+        }
+      ]
     }
   ]
 }
