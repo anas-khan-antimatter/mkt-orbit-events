@@ -8,8 +8,9 @@ const navLinks = [
   { href: "/services/experiential", label: "Experiential" },
   { href: "/services/corporate", label: "Corporate" },
   { href: "/services/festivals", label: "Festivals" },
-  { href: "/budget-planner", label: "Budget Planner" },
+  { href: "/budget-planner", label: "Budget" },
   { href: "/vendor-checklist", label: "Checklist" },
+  { href: "/run-of-show", label: "Run of Show" },
 ];
 
 export default function Navbar() {

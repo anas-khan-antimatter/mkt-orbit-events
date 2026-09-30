@@ -41,6 +41,7 @@ export default function Footer() {
               {[
                 { href: "/work", label: "Our Work" },
                 { href: "/vendor-checklist", label: "Vendor Checklist" },
+                { href: "/run-of-show", label: "Run of Show Generator" },
                 { href: "/inquire", label: "Inquire" },
               ].map((l) => (
                 <li key={l.href}>
