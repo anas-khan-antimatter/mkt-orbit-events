@@ -1,10 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: {
-    // Force Vercel to see a change
-    cacheControl: "public, max-age=0, must-revalidate",
-  },
+  // No custom output config needed — default works for Vercel
 };
 
 export default nextConfig;
