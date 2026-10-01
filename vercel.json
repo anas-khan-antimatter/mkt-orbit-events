@@ -1,5 +1,1 @@
-{
-  "rootDirectory": "orbit-events",
-  "buildCommand": "npm run build",
-  "outputDirectory": ".next"
-}
+{"rootDirectory":"orbit-events"}
