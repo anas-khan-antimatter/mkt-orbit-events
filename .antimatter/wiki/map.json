@@ -1,20 +1,28 @@
 {
-  "root": "/tmp/am-ws/c-1790732972231-maddm",
-  "name": "c-1790732972231-maddm",
-  "generatedAt": "2026-09-30T17:40:07.371Z",
-  "fileCount": 30,
-  "dirCount": 5,
+  "root": "/tmp/am-ws/c-1790884286813-meou9",
+  "name": "c-1790884286813-meou9",
+  "generatedAt": "2026-10-02T22:14:38.086Z",
+  "fileCount": 43,
+  "dirCount": 16,
   "languages": {
+    "JSON": 8,
     "Markdown": 9,
-    "JSON": 4,
     "JavaScript": 2,
-    "TypeScript": 3,
+    "TypeScript": 12,
     "CSS": 1
   },
   "keyFiles": [
     "README.md"
   ],
   "directories": [
+    {
+      "dir": ".antimatter/lanes",
+      "fileCount": 1,
+      "files": [
+        "ship.json"
+      ],
+      "symbols": []
+    },
     {
       "dir": ".antimatter/wiki",
       "fileCount": 6,
@@ -30,16 +38,17 @@
     },
     {
       "dir": "(root)",
-      "fileCount": 2,
+      "fileCount": 3,
       "files": [
         ".gitignore",
-        "README.md"
+        "README.md",
+        "vercel.json"
       ],
       "symbols": []
     },
     {
       "dir": "orbit-events",
-      "fileCount": 10,
+      "fileCount": 11,
       "files": [
         ".gitignore",
         "AGENTS.md",
@@ -50,7 +59,16 @@
         "package.json",
         "postcss.config.mjs",
         "README.md",
-        "tsconfig.json"
+        "tsconfig.json",
+        "vercel.json"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "orbit-events/.antimatter/lanes",
+      "fileCount": 1,
+      "files": [
+        "ship.json"
       ],
       "symbols": []
     },
@@ -84,6 +102,88 @@
           "kind": "const"
         }
       ]
+    },
+    {
+      "dir": "orbit-events/src/app/api/brief",
+      "fileCount": 1,
+      "files": [
+        "route.ts"
+      ],
+      "symbols": [
+        {
+          "name": "POST",
+          "kind": "fn"
+        }
+      ]
+    },
+    {
+      "dir": "orbit-events/src/app/api/run-of-show",
+      "fileCount": 1,
+      "files": [
+        "route.ts"
+      ],
+      "symbols": [
+        {
+          "name": "POST",
+          "kind": "fn"
+        }
+      ]
+    },
+    {
+      "dir": "orbit-events/src/app/brief",
+      "fileCount": 1,
+      "files": [
+        "page.tsx"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "orbit-events/src/app/budget",
+      "fileCount": 1,
+      "files": [
+        "page.tsx"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "orbit-events/src/app/inquire",
+      "fileCount": 1,
+      "files": [
+        "page.tsx"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "orbit-events/src/app/services",
+      "fileCount": 1,
+      "files": [
+        "page.tsx"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "orbit-events/src/app/vendor",
+      "fileCount": 1,
+      "files": [
+        "page.tsx"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "orbit-events/src/app/work",
+      "fileCount": 1,
+      "files": [
+        "page.tsx"
+      ],
+      "symbols": []
+    },
+    {
+      "dir": "orbit-events/src/app/work/[slug]",
+      "fileCount": 1,
+      "files": [
+        "page.tsx"
+      ],
+      "symbols": []
     }
   ]
 }
